@@ -4,7 +4,7 @@
   };
 
   NoteModelList.prototype.add = function(noteModel) {
-    this.notes.push(noteModel);
+    this.notes.push(new NoteModel(noteModel));
   };
 
   NoteModelList.prototype.seeStoredNotes = function() {

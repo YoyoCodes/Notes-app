@@ -1,0 +1,22 @@
+{
+  "name": "notes_app",
+  "version": "1.0.0",
+  "description": "## Task: Build a notes app as a frontend, single page web app. Write unit tests without using a testing library. Use the constructor and prototype pattern.",
+  "main": "note-list-model-tests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoyoCodes/Notes-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoyoCodes/Notes-app/issues"
+  },
+  "homepage": "https://github.com/YoyoCodes/Notes-app#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
