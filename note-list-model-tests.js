@@ -1,6 +1,6 @@
 (function(exports){
   function testListNotesStoredInArray(){
-    var noteModel = new NoteModel();
+    var noteModel = new NoteModel("test 1");
     var noteModelList = new NoteModelList();
 
     noteModelList.add(noteModel);
