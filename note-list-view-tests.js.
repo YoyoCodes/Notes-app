@@ -1,0 +1,10 @@
+(function(exports){
+  function testReturnsHTMLString(){
+    var note = new Note();
+    note.add("new note");
+    if(note.getHTML() !== "<ul><li><div>new note</div></li></ul>") {
+      throw new Error("Incorrect HTML string output");
+    }
+  };
+testReturnsHTMLString();
+})(this);

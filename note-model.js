@@ -1,11 +1,11 @@
 (function(exports) {
-  function Note() {
-    this.text = "My favourite language is JavaSacript";
+  function NoteModel() {
+    this.text = "My favourite language is JavaScript";
   };
 
-  Note.prototype.read = function(){
+  NoteModel.prototype.read = function(){
     return this.text;
   };
 
-  exports.Note = Note;
+  exports.NoteModel = NoteModel;
 })(this);
