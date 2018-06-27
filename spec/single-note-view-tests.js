@@ -1,9 +1,9 @@
-// (function (exports){
-//   function testASingleNoteIsDisplayed(){
-//     var noteView = new SingleNoteView(new NoteModel("test 1"));
-//     if(noteView.getHtml() !== "<div>test1</div>") {
-//       throw new Error("Incorrect HTML string ouput")
-//     }
-//   }
-// testASingleNoteIsDisplayed();
-// })(this)
+(function(){
+  var singleNoteView = new SingleNoteView(note = new NoteModel("test1"));
+  assert.isTrue("correct HTML string ouput", singleNoteView.getHTML() == "<div>test1</div>");
+})();
+
+(function(){
+  var singleNoteView = new SingleNoteView(note = new NoteModel("test2"));
+  assert.isTrue("correct HTML string ouput", singleNoteView.getHTML() == "<div>test2</div>");
+})();
