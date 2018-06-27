@@ -3,9 +3,8 @@
     this.notes = [];
   };
 
-  NoteModelList.prototype.add = function(text) {
-    var note = new NoteModel(text)
-    this.notes.push(note);
+  NoteModelList.prototype.add = function(noteModel) {
+    this.notes.push(noteModel);
   };
 
   NoteModelList.prototype.seeStoredNotes = function() {
