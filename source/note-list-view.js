@@ -8,7 +8,7 @@
     for (var i= 0; i < this.notesList.seeStoredNotes().length; i++){
       htmlstring = htmlstring +
                     "<li><div>" +
-                    this.notesList.seeStoredNotes()[i].read() +
+                    String(this.notesList.seeStoredNotes()[i].read()).substring(0, 20) +
                     "</div></li>"
                     console.log(this.notesList.seeStoredNotes()[i].read());
     }
