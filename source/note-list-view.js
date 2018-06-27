@@ -5,12 +5,13 @@
 
   NoteListView.prototype.getHTML = function(){
     var htmlstring = "<ul>"
-    for (let i in this.notesList.seeStoredNotes()){
+    for (var i= 0; i < this.notesList.seeStoredNotes().length; i++){
       htmlstring = htmlstring +
                     "<li><div>" +
-                    this.notesList.seeStoredNotes()[i].read() +
+                    String(this.notesList.seeStoredNotes()[i].read()).substring(0, 20) +
                     "</div></li>"
     }
+
     htmlstring = htmlstring + "</ul>"
     return htmlstring;
   };
