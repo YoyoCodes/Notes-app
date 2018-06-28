@@ -1,6 +1,6 @@
 (function(exports){
-  function NoteListView(NoteModelList) {
-    this.notesList = NoteModelList;
+  function NoteListView(noteModelList) {
+    this.notesList = noteModelList;
   };
 
   NoteListView.prototype.getHTML = function(){
