@@ -28,3 +28,8 @@ So I can record something I need to remember<br>
 As a programmer<br>
 I can see the full text of an individual note on its own page<br>
 So I can see all the information in the note<br>
+
+
+
+note = new NoteModel("jen"); notelist = new NoteModelList; notelist.add(note); controller = new NoteController(notelist);
+controller.getView(0);

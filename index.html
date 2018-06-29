@@ -12,5 +12,20 @@
 <script src="./source/note-list-view.js"></script>
 <script src="./source/note-controller.js"></script>
 <script src="./source/single-note-view.js"></script>
+<script>
+var noteList = new NoteModelList;
+var controller = new NoteController(noteList);
+
+makeUrlchangeShowNoteForCurrentPage();
+function makeUrlchangeShowNoteForCurrentPage() {
+  window.addEventListener("hashchange", showNoteForCurrentPage);
+};
+function showNoteForCurrentPage() {
+  controller.getView(getNoteId(window.location));
+};
+function getNoteId(location) {
+  return location.hash.split("s")[1];
+};
+</script>
 </body>
 </html>
