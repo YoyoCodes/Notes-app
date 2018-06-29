@@ -1,5 +1,6 @@
 (function(exports) {
   function NoteController(noteModelList) {
+    this.noteModelList = noteModelList;
     this.noteListView = new NoteListView(noteModelList);
   };
 
@@ -8,6 +9,7 @@
     element.innerHTML = this.noteListView.getHTML();
   }
 
+  makeUrlChangeShowNoteForCurrentPage();
   function makeUrlChangeShowNoteForCurrentPage() {
         window.addEventListener("hashchange", showNoteForCurrentPage);
   };
@@ -20,11 +22,11 @@
        return location.hash.split("#")[1];
   };
 
-  function showNote(singleNoteView) {
+  function showNote() {
       document
         .getElementById("note")
-        .innerHTML = SingleNoteView;
+        .innerHTML = this.noteModelList.findNoteByID(0);
   };
 
-  exports.NoteController = NoteController;
+exports.NoteController = NoteController;
 })(this);
