@@ -32,4 +32,3 @@ So I can see all the information in the note<br>
 
 
 note = new NoteModel("jen"); notelist = new NoteModelList; notelist.add(note); controller = new NoteController(notelist);
-controller.getView(0);
