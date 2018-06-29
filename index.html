@@ -4,6 +4,11 @@
 </head>
 
 <body>
+<form id="text" action="notes/new" method="post">
+<textarea id="new" rows="4" cols="50" value="text"></textarea><br>
+<input type="submit" value="Submit">
+</form>
+
 <h2>Notes:</h2>
 <div id="app"></div>
 <div id="note"></div>
@@ -25,6 +30,17 @@ function showNoteForCurrentPage() {
 };
 function getNoteId(location) {
   return location.hash.split("s")[1];
+};
+
+blockSubmit();
+function blockSubmit() {
+  window.addEventListener("submit", function(clickEvent) {
+    clickEvent.preventDefault();
+    console.log(document.getElementById("new").value);
+    var note = new NoteModel(document.getElementById("new").value);
+    noteList.add(note);
+    controller.insert(); 
+  });
 };
 </script>
 </body>
