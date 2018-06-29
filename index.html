@@ -31,6 +31,13 @@ function showNoteForCurrentPage() {
 function getNoteId(location) {
   return location.hash.split("s")[1];
 };
+
+blockSubmit();
+function blockSubmit() {
+  window.addEventListener("submit", function(clickEvent) {
+    clickEvent.preventDefault();
+  });
+};
 </script>
 </body>
 </html>
