@@ -1,4 +1,5 @@
 (function(exports) {
+
   function NoteController(noteModelList) {
     this.noteModelList = noteModelList;
     this.noteListView = new NoteListView(noteModelList);
@@ -11,8 +12,9 @@
 
   NoteController.prototype.getView = function(id){
     var noteModel = this.noteModelList.findNoteById(id);
-    var singleView = new SingleView(noteModel);
-    return singleView.getHTML();
+    var singleView = new SingleNoteView(noteModel);
+    var element = document.getElementById("note");
+    element.innerHTML = singleView.getHTML();
   }
 
   exports.NoteController = NoteController;
