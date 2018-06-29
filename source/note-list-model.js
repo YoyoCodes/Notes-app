@@ -11,5 +11,9 @@
     return this.notes;
   };
 
+  NoteModelList.prototype.findNoteById = function(id) {
+    return this.notes[id];
+  }
+
   exports.NoteModelList = NoteModelList;
 })(this);
