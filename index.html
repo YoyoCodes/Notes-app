@@ -39,6 +39,7 @@ function blockSubmit() {
     console.log(document.getElementById("new").value);
     var note = new NoteModel(document.getElementById("new").value);
     noteList.add(note);
+    controller.insert(); 
   });
 };
 </script>
