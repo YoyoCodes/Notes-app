@@ -7,7 +7,7 @@
     var htmlstring = "<ul>"
     for (var i= 0; i < this.notesList.seeStoredNotes().length; i++){
       htmlstring = htmlstring +
-                    "<li><a href='#notes//" +
+                    "<li><a href='#notes" +
                     i+
                     "'><div id='"+
                     i +
